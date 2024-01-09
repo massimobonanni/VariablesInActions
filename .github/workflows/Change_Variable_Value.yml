@@ -37,7 +37,7 @@ jobs:
         id: getDate
         uses: Kaven-Universe/github-action-current-date-time@v1
         with:
-          format: "yyyy.MMdd"
+          format: "YYYY.MMDD"
       - name: Create variable from date
         run: echo "version=${{ steps.getDate.outputs.year }}" >> $GITHUB_ENV
       - name: Print new variable value
