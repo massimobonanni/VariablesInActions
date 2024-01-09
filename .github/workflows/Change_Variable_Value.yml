@@ -33,7 +33,12 @@ jobs:
         run: echo "NEWVARIABLE='Here I am'" >> $GITHUB_ENV
       - name: Print new variable value
         run: echo "NEWVARIABLE = " ${{ env.NEWVARIABLE }}
+      - name: retrieve datetime from action
+        id: getDate
+        uses: Kaven-Universe/github-action-current-date-time@v1
+        with:
+          format: "yyyy.MMdd"
       - name: Create variable from date
-        run: echo "version=$(date +"%Y.%m%d")" >> $GITHUB_ENV
+        run: echo "version=${{ steps.getDate.outputs.year }}" >> $GITHUB_ENV
       - name: Print new variable value
-        run: echo "version = " ${{ env.version }}
+        run: echo "version = " ${{ env.version }}          
