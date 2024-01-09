@@ -33,3 +33,7 @@ jobs:
         run: echo "NEWVARIABLE='Here I am'" >> $GITHUB_ENV
       - name: Print new variable value
         run: echo "NEWVARIABLE = " ${{ env.NEWVARIABLE }}
+      - name: Create variable from date
+        run: echo "version=$(date %Y.%m%d.)" >> $GITHUB_ENV
+      - name: Print new variable value
+        run: echo "version = " ${{ env.version }}
