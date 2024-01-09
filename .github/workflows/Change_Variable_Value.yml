@@ -39,6 +39,6 @@ jobs:
         with:
           format: "YYYY.MMDD"
       - name: Create variable from date
-        run: echo "version=${{ steps.getDate.outputs.year }}" >> $GITHUB_ENV
+        run: echo "version=${{ steps.getDate.outputs.time }}" >> $GITHUB_ENV
       - name: Print new variable value
         run: echo "version = " ${{ env.version }}          
