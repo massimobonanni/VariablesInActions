@@ -1,4 +1,4 @@
-name: Create issue on commit (GITHUBTOKEN)
+name: Create issue (GITHUBTOKEN)
 
 on: 
   workflow_dispatch
