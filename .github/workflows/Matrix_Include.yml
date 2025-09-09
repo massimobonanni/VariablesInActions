@@ -12,11 +12,15 @@ jobs:
         environment: ['dev','test']
         slot: ['blue','green']
         include:
-          - slot: 'black'
           - region: 'northeurope'
+            environment: 'preprod'
+            slot: 'black'
+          - region: 'northeurope'
+            environment: 'preprod'
             slot: 'blue'
           - region: 'eastus'
             environment: 'preprod'
+            slot: 'blue'
     steps:
       - run: echo 'Deploying on region ${{ matrix.region}} environment ${{ matrix.environment}} with ${{ matrix.slot }}'
       - run: date
