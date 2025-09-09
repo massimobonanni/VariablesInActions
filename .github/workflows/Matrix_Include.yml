@@ -10,8 +10,9 @@ jobs:
       matrix:
         region: ['northeurope','westeurope']
         environment: ['dev','test']
+        slot: ['blue',''green']
         include:
-          - slot: 'green'
+          - slot: 'black'
           - region: 'northeurope'
             slot: 'blue'
           - region: 'eastus'
